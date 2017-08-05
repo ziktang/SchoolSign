@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="45dp"
+              android:orientation="horizontal"
+              android:gravity="center_vertical"
+              android:layout_marginTop="1dp"
+              android:background="@drawable/item_click"
+    >
+
+    <TextView
+        android:id="@+id/uid"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center_vertical"
+        android:paddingLeft="24dp"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/uname"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        />
+    <com.schoolsign.views.IconFontTextView
+        android:id="@+id/sign_state"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="2"
+        android:gravity="center_vertical"
+        android:text="&#xe60e;"
+        android:paddingLeft="3dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24dp"
+        />
+    
+</LinearLayout>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="32dp"
+    android:paddingRight="32dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.schoolsign.user.view.LoginActivity">
+
+    <!-- 学校 -->
+    <LinearLayout
+        android:id="@+id/ll_school"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/item_click"
+        android:orientation="horizontal"
+        android:descendantFocusability="beforeDescendants"
+        android:clickable="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <com.schoolsign.views.IconFontTextView
+            android:id="@+id/school"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="&#xe68b;"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:id="@+id/tv_school"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.9"
+            android:hint="学校"
+            android:gravity="center_vertical"
+            android:textColorHint="@color/black_light"
+            android:textSize="16sp"
+            />
+
+        <com.schoolsign.views.IconFontTextView
+            android:id="@+id/select_school"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="&#xe603;"
+            android:textColor="@color/black_light"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+
+    <!-- 昵称 -->
+    <LinearLayout
+        android:id="@+id/ll_nick"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_school"
+        >
+
+        <com.schoolsign.views.IconFontTextView
+            android:id="@+id/nick"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="&#xe669;"
+            android:textSize="18sp"
+            />
+
+
+        <EditText
+            android:id="@+id/et_nickName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.9"
+            android:background="@null"
+            android:hint="昵称"
+            android:textColorHint="@color/black_light"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+
+    <!-- 手机号 -->
+    <LinearLayout
+        android:id="@+id/ll_user"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_nick"
+        >
+
+        <com.schoolsign.views.IconFontTextView
+            android:id="@+id/phone"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="&#xe68d;"
+            android:textSize="20sp"
+            />
+
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.9"
+            android:background="@null"
+            android:hint="手机号"
+            android:inputType="number"
+            android:textColorHint="@color/black_light"
+            android:textSize="16sp"
+            />
+
+        <com.schoolsign.views.IconFontTextView
+            android:id="@+id/clear"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="&#xe69e;"
+            android:textColor="@color/clear_selector"
+            android:visibility="invisible"
+            android:textSize="18sp"
+            />
+
+    </LinearLayout>
+
+
+    <!-- 验证码 -->
+    <LinearLayout
+        android:id="@+id/ll_code"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_user"
+        >
+
+        <com.schoolsign.views.IconFontTextView
+            android:id="@+id/code"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="&#xe601;"
+            android:textSize="22sp"
+            />
+
+        <EditText
+            android:id="@+id/register_code"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入验证码"
+            android:gravity="center_vertical"
+            android:textColor="@color/font_gray"
+            android:textColorHint="@color/font_light"
+            android:textSize="16sp"
+            />
+
+        <com.schoolsign.views.CodeButton
+            android:id="@+id/num_code"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/code_bg"
+            android:text="验证码"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
+    <!-- 密码 -->
+    <LinearLayout
+        android:id="@+id/ll_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_code"
+        >
+
+        <com.schoolsign.views.IconFontTextView
+            android:id="@+id/pwd"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="&#xe690;"
+            android:textSize="20sp"
+            />
+
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.9"
+            android:background="@null"
+            android:hint="密码"
+            android:inputType="textPassword"
+            android:textColorHint="@color/black_light"
+            android:textSize="16sp"
+            />
+
+        <com.schoolsign.views.IconFontTextView
+            android:id="@+id/show"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="&#xe64b;"
+            android:textColor="@color/password_selector"
+            android:visibility="invisible"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/userType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_pwd"
+        android:layout_marginTop="16dp"
+        >
+
+        <RadioButton
+            android:id="@+id/user_te"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="老师"
+            />
+        <RadioButton
+            android:id="@+id/user_st"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:text="学生"/>
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bt_oval"
+        android:gravity="center"
+        android:text="注册"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userType"/>
+
+
+    <TextView
+        android:id="@+id/to_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:layout_marginTop="20dp"
+        android:text="已有账号登陆"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/register"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="第三方登录"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/third_login"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/third_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+        <com.schoolsign.views.IconFontTextView
+            android:id="@+id/weixin"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:gravity="center"
+            android:text="&#xe6b1;"
+            android:textColor="@color/weixin"
+            android:textSize="40sp"
+            />
+
+        <com.schoolsign.views.IconFontTextView
+            android:id="@+id/qq"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:gravity="center"
+            android:text="&#xe6a0;"
+            android:textColor="@color/qq"
+            android:textSize="40sp"
+            />
+
+        <com.schoolsign.views.IconFontTextView
+            android:id="@+id/weibo"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:gravity="center"
+            android:text="&#xe6a5;"
+            android:textColor="@color/weibo"
+            android:textSize="40sp"
+            />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

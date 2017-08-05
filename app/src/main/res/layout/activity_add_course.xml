@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        >
+
+        <com.schoolsign.views.IconFontTextView
+            android:id="@+id/back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="&#xe600;"
+            android:gravity="center"
+            android:textColor="@color/toolbar_back_color"
+            android:textSize="24sp"/>
+
+        <EditText
+            android:id="@+id/et_course"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:paddingBottom="16dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:hint="要搜索的课程编号"
+            android:textColorHint="@color/white_light"
+            android:textSize="16sp"
+            app:theme="@style/AppTheme"
+            />
+
+        <com.schoolsign.views.IconFontTextView
+            android:id="@+id/search_course"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="&#xe602;"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#56abe4</color>
+    <color name="colorPrimaryDark">#2196F3</color>
+
+    <color name="colorAccent">#E68F7F</color>
+
+    <color name="button_bg">#F2F4F5</color>
+
+    <color name="button_bg_press">#D9DBDC</color>
+    <color name="base">#AAAAAA</color>
+
+
+    <color name="blue_light">#BCE0F5</color>
+
+    <color name="font_gray">#55000000</color>
+    <color name="font_light">#9F9F9F</color>
+    <color name="code_gray">#D6D7D7</color>
+    <color name="white_light">#EDEDED</color>
+
+
+
+
+    <!-- 文字 -->
+    <color name="black_light">#AAABAB</color>
+    <color name="weibo">#E05244</color>
+    <color name="weixin">#01BB2A</color>
+    <color name="qq">#498AD5</color>
+
+
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="item_divider_line">#EDEDED</color>
+    <color name="toolbar_title_color">#000000</color>
+    <color name="toolbar_back_color">#FFFFFF</color>
+
+</resources>
